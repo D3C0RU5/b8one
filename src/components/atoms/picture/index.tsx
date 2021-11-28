@@ -1,10 +1,11 @@
 import React from "react";
 
 interface PictureProps {
-  imageSrc: string;
-  alt: string;
-  maxWidth?: string;
-  width?: string;
+  imageSrc: string | undefined;
+  alt: string | undefined;
+  maxWidth?: string | undefined;
+  width?: string | undefined;
+  style?: object;
 }
 
 const Picture: React.FC<PictureProps> = ({
@@ -12,12 +13,13 @@ const Picture: React.FC<PictureProps> = ({
   maxWidth,
   width,
   alt,
+  style,
 }) => {
   return (
     <img
       src={imageSrc}
       alt={alt}
-      style={{ width: width, maxWidth: maxWidth }}
+      style={{ ...style, width: width, maxWidth: maxWidth }}
     />
   );
 };
