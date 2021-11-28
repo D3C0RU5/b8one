@@ -1,33 +1,25 @@
 import React from "react";
 import ProductCard from "../../molecules/product-card";
-import { Row, Container } from "./styles";
+import { Product } from "../../../types";
+import { Section } from "./styles";
 
 interface ProductListProps {
   products: Product[];
 }
 
-interface Product {
-  title: string;
-  priceWithoutDiscount: Number;
-  price: Number;
-  parcel: {
-    times: Number;
-    value: Number;
-  };
-  imageSrc: string;
-}
-
-const ProductList: React.FC<ProductListProps> = (props) => {
-  const { products } = props;
-
+const ProductList: React.FC<ProductListProps> = ({ products }) => {
   return (
-    <Row>
-      {products.map((p) => (
-        <Container>
-          <ProductCard product={p}></ProductCard>
-        </Container>
-      ))}
-    </Row>
+    <Section>
+      <div className="container">
+        <div className="row App">
+          {products.map((p, i) => (
+            <div className={"col-md-4"}>
+              <ProductCard product={p}></ProductCard>
+            </div>
+          ))}
+        </div>
+      </div>
+    </Section>
   );
 };
 

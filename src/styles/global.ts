@@ -1,15 +1,13 @@
-import {createGlobalStyle} from 'styled-components'
+import { createGlobalStyle } from "styled-components";
 
-const GlobalStyle =  createGlobalStyle`
-    * {
+const GlobalStyle = createGlobalStyle`
+    html,body {
         margin: 0;
         padding: 0;
         outline: 0;
         box-sizing:border-box;
-        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-    color:#f00;
+        font-family: 'Inter';
+        color:#1C1C1C;
     }
 
     #root{
@@ -17,4 +15,4 @@ const GlobalStyle =  createGlobalStyle`
     }
 `;
 
-export default GlobalStyle
+export default GlobalStyle;
