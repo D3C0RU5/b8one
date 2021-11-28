@@ -11,7 +11,7 @@ const ProductList: React.FC<ProductListProps> = ({ products }) => {
   return (
     <Section>
       <div className="container">
-        <div className="row App">
+        <div className="row App justify-content-center">
           {products.map((p, i) => (
             <div key={i} className="col-md-6 col-lg-4">
               <ProductCard product={p}></ProductCard>
