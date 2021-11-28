@@ -16,6 +16,9 @@ export const Component = styled.div<ComponentProps>`
     padding:12px 24px;
     border-radius:5px;
     text-align:center;
+    font-size: 16px;
+    text-transform: uppercase;
+    font-weight: 600;
     
     background-color: ${(props) => props.bgColor};
     color: ${(props) => props.foreColor};

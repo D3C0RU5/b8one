@@ -1,12 +1,9 @@
 import React from "react";
-
-import Wish from "../../atoms/wish";
-import Button from "../../atoms/button";
-import Picture from "../../atoms/picture";
-import Typography from "../../atoms/typography";
-
 import { IoMdCheckmark } from "react-icons/io";
-import { formatNumberToMonetary } from "../../../utils/methods";
+
+import { Wish, Button, Picture, Typography } from "../../atoms";
+
+import { formatNumberToMonetary } from "../../../utils/format";
 import { Product } from "../../../types";
 import {
   Card,
@@ -22,12 +19,11 @@ interface ProductCardProps {
   product: Product;
 }
 
-const ProductCard: React.FC<ProductCardProps> = (props) => {
-  const { product } = props;
+const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
   return (
     <Card>
       <Header>
-        <Picture imageSrc={product.imageSrc} />
+        <Picture imageSrc={product.imageSrc} alt={product.imageAlt} />
         <FloatButton>
           <Wish />
         </FloatButton>

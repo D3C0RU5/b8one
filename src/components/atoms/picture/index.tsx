@@ -2,13 +2,24 @@ import React from "react";
 
 interface PictureProps {
   imageSrc: string;
+  alt: string;
   maxWidth?: string;
   width?: string;
 }
 
-const Picture: React.FC<PictureProps> = (props) => {
-  const { imageSrc, maxWidth, width } = props;
-  return <img src={imageSrc} style={{ width: width, maxWidth: maxWidth }} />;
+const Picture: React.FC<PictureProps> = ({
+  imageSrc,
+  maxWidth,
+  width,
+  alt,
+}) => {
+  return (
+    <img
+      src={imageSrc}
+      alt={alt}
+      style={{ width: width, maxWidth: maxWidth }}
+    />
+  );
 };
 
 Picture.defaultProps = {

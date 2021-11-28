@@ -1,5 +1,6 @@
 
 export interface Product {
+    id: string;
     title: string;
     priceWithoutDiscount: Number;
     price: Number;
@@ -8,4 +9,5 @@ export interface Product {
       value: Number;
     };
     imageSrc: string;
+    imageAlt: string;
   }

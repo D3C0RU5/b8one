@@ -5,9 +5,10 @@ export const Card = styled.div`
     padding: 32px;
     border-radius: 8px;
     
+    margin-bottom: 15px;
+
     &:hover{
         box-shadow: 0px 8px 24px 0px #00000014;
-
     }
 `;
 
