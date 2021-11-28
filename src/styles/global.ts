@@ -13,6 +13,9 @@ const GlobalStyle = createGlobalStyle`
     #root{
         margin: 0 auto;
     }
+    .container{
+        max-width: 984px;
+    }
 `;
 
 export default GlobalStyle;
