@@ -38,7 +38,11 @@ const ProductCard: React.FC = () => {
               Made with <BsFillHeartFill color="#da4b4f" /> by{" "}
               <strong>
                 Carlos Henrique (
-                <a href="https://github.com/D3C0RU5" target="_blank">
+                <a
+                  href="https://github.com/D3C0RU5"
+                  rel="noreferrer"
+                  target="_blank"
+                >
                   {user?.login}
                 </a>
                 )
